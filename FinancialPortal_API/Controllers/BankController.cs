@@ -60,6 +60,7 @@ namespace FinancialPortal_API.Controllers
         /// <param name="WarningBalance">Amount to be notified at</param>
         /// <returns>Updated Bank Account</returns>
         [Route("UpdateBankById")]
+        [HttpPatch]
         public async Task<BankAccount> UpdateBankById(int Id, string AccountName, decimal CurrentBalance, decimal WarningBalance)
         {
             return await db.UpdateBankById(Id, AccountName, CurrentBalance, WarningBalance);

@@ -57,6 +57,7 @@ namespace FinancialPortal_API.Controllers
         /// <param name="CurrentAmount">Current monetary balance for the Budget</param>
         /// <returns></returns>
         [Route("UpdateBudgetById")]
+        [HttpPatch]
         public async Task<Budget> UpdateBudgetById(int Id, string BudgetName, decimal CurrentAmount)
         {
             return await db.UpdateBudgetById( Id,  BudgetName,  CurrentAmount);

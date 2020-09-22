@@ -1,4 +1,5 @@
-﻿using FinancialPortal_API.Models;
+﻿using FinancialPortal_API.Enums;
+using FinancialPortal_API.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,6 +36,12 @@ namespace FinancialPortal_API.Controllers
         public async Task<int> DeleteTransactionById(int Id)
         {
             return await db.DeleteTransactionById(Id);
+        }
+
+        [Route("InsertTransactionData")]
+        public async Task<Transaction> InsertTransactionData(int BudgetItemId, string OwnerId, TransactionType TransactionType, decimal Amount, string Memo, bool IsDeleted, int AccountId)
+        {
+            return await db.InsertTransactionData(BudgetItemId, OwnerId, TransactionType, Amount, Memo, IsDeleted, AccountId);
         }
     }
 }

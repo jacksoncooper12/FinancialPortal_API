@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinancialPortal_API.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -27,6 +28,10 @@ namespace FinancialPortal_API.Models
         /// FK for the Owner
         /// </summary>
         public string OwnerId { get; set; }
+        /// <summary>
+        /// Transaction Type
+        /// </summary>
+        public TransactionType TransactionType { get; set; }
 
         //public TransactionType TransactionType { get; set; }
         /// <summary>

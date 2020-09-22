@@ -59,6 +59,7 @@ namespace FinancialPortal_API.Controllers
         /// <param name="TargetAmount">Amount to reach for the Item</param>
         /// <returns></returns>
         [Route("UpdateBudgetItemById")]
+        [HttpPatch]
         public async Task<BudgetItem> UpdateBudgetItemById(int Id, string ItemName, decimal CurrentAmount, decimal TargetAmount)
         {
             return await db.UpdateBudgetItemById(Id, ItemName, CurrentAmount, TargetAmount);

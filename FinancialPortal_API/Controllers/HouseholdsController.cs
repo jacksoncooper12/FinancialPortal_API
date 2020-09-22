@@ -66,6 +66,7 @@ namespace FinancialPortal_API.Controllers
         /// <param name="Greeting">What new users will see</param>
         /// <returns>Updated Household</returns>
         [Route("UpdateHouseholdById")]
+        [HttpPatch]
         public async Task<Household> UpdateHouseholdById(int Id, string HouseholdName, string Greeting)
         {
             return await db.UpdateHouseholdById(Id, HouseholdName, Greeting);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinancialPortal_API.Enums;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.SqlClient;
@@ -157,11 +158,16 @@ namespace FinancialPortal_API.Models
                new SqlParameter("CurrentAmount", CurrentAmount)
                ).FirstOrDefaultAsync();
         }
-        public async Task<Transaction> InsertTransactionData(string HouseholdName, string Greeting)
+        public async Task<Transaction> InsertTransactionData(int BudgetItemId, string OwnerId, TransactionType TransactionType, decimal Amount, string Memo, bool IsDeleted, int AccountId)
         {
-            return await Database.SqlQuery<Transaction>("InsertTransactionData @HouseholdName, @Greeting",
-               new SqlParameter("HouseholdName", HouseholdName),
-               new SqlParameter("Greeting", Greeting)
+            return await Database.SqlQuery<Transaction>("InsertTransactionData @BudgetItemId, @OwnerId, @TransactionType, @Amount, @Memo, @IsDeleted, @AccountId",
+               new SqlParameter("BudgetItemId", BudgetItemId),
+               new SqlParameter("OwnerId", OwnerId),
+               new SqlParameter("TransactionType", TransactionType),
+               new SqlParameter("Amount", Amount),
+               new SqlParameter("Memo", Memo),
+               new SqlParameter("IsDeleted", IsDeleted),
+               new SqlParameter("AccountId", AccountId)
                ).FirstOrDefaultAsync();
         }
         #endregion

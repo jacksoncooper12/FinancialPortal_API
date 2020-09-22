@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialPortal_API", "FinancialPortal_API\FinancialPortal_API.csproj", "{FC144B16-680E-425C-A4E2-714B67A534D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC144B16-680E-425C-A4E2-714B67A534D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC144B16-680E-425C-A4E2-714B67A534D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC144B16-680E-425C-A4E2-714B67A534D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC144B16-680E-425C-A4E2-714B67A534D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D5E17FD-01EB-419A-AE78-33485CE7FEB1}
+	EndGlobalSection
+EndGlobal
